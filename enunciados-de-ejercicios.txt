@@ -1,0 +1,18 @@
+
+Ejercicios (Semana 2)
+----------------------
+
+1. Escriba programa en Python que lea dos datos numéricos reales y que luego los imprima en una sola línea separados por la palabra “and”.
+      Ejemplo:
+         Entradas: 8.2 -100.98
+         Salida:   8.2 and -100.98
+
+2. Elabore un programa en Python que lea un entero de cuatro dígitos y produzca como salida los dígitos del número leído con su correspondiente mensaje. Por ejemplo, si el número leído es 1024, la salida deberá ser(sin texto adicional):
+	1
+	0
+	2
+	4
+
+3. Elabore programa en Python que lea dos datos enteros correspondientes a los catetos de un triángulo rectángulo y que calcule e imprima el valor de la hipotenusa de dicho triángulo.
+
+4. Elabore programa en Python que imprima la suma de los números enteros de 300 hasta 5000
