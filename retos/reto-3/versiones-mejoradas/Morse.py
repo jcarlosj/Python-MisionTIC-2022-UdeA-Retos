@@ -66,7 +66,7 @@ class Morse :
         for list_word in words:
             list_message .append( cls .encode( list_word ) )
 
-        return cls .get_phrase( list_message )
+        return cls .get_phrase( list_message )[:-2]     #   Elimina el ultimo espacio y la ultima barra
 
     @classmethod
     def decode_msg( cls, code_morse ) :
