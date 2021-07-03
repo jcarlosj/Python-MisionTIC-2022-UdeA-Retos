@@ -133,7 +133,7 @@ def solucion() :
     info = analyze_data( data_list )
     #print( type( info ), info )
     #return date_lowest, lowest_value, date_highest, highest_value
-    return info[ 0 ][ 0 ], info[ 0 ][ 1 ], info[ 1 ][ 0 ], info[ 1 ][ 1 ]
+    return info[ 0 ][ 0 ], float( info[ 0 ][ 1 ] ), info[ 1 ][ 0 ], float( info[ 1 ][ 1 ] )
 
 # ! Testing
 if __name__== "__main__":

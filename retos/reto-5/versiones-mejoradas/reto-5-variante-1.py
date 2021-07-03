@@ -3,24 +3,27 @@ import pathlib, os
 path = pathlib .Path( __file__ ) .parent .absolute()
 
 def analiza_data( data_list ) :
+    index_data = data_list[ 0 ] .index( 'Date' )
+    index_high = data_list[ 0 ] .index( 'High' )
+    index_low = data_list[ 0 ] .index( 'Low' )
+
     # Definimos valores por defecto (Primeros datos del archivo)
     mayor = data_list[ 1 ][ 2 ] # High
     menor = data_list[ 1 ][ 3 ] # Low
-    fecha_mayor = ''
-    fecha_menor = ''
+    fecha_mayor = data_list[ 1 ][ 0 ]
+    fecha_menor = data_list[ 1 ][ 0 ]
 
     for index, registro in enumerate( data_list ) :
         if index > 0 :
-            fecha = registro[ 0 ]
 
-            if registro[ 3 ] < menor :
-                menor = registro[ 3 ]
-                fecha_menor = registro[ 0 ]
-            if registro[ 2 ] > mayor :
-                mayor = registro[ 2 ]
-                fecha_mayor = registro[ 0 ]
+            if registro[ index_low ] < menor :
+                menor = registro[ index_low ]
+                fecha_menor = registro[ index_data ]
+            if registro[ index_high ] > mayor :
+                mayor = registro[ index_high ]
+                fecha_mayor = registro[ index_data ]
 
-    return fecha_mayor, mayor, fecha_menor, menor
+    return fecha_mayor, float( mayor ), fecha_menor, float( menor )
 
 def separa_data( data_list ) :
     data_procesada = []
